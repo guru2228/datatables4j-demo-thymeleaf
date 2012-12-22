@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="headerFragment">
+<title>DataTables4j Thymeleaf demo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css" />
+
+<style>
+body {
+	padding-top: 60px;
+	/* 60px to make the container go all the way to the bottom of the topbar */
+}
+</style>
+
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.js"></script>
+
+</head>
+<body>
+   <div th:fragment="navbarFragment">
+      <div class="navbar navbar-fixed-top">
+         <div class="navbar-inner">
+            <div class="container">
+               <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+               </a> <a class="brand" href="#">DataTables4j Thymeleaf Demo</a>
+               <div class="nav-collapse collapse">
+                  <ul class="nav">
+                     <li class="active"><a th:href="@{/home}"><i class="icon-home"></i> Home</a></li>
+                     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-leaf"></i> Basic<b
+                           class="caret"
+                        ></b></a>
+                        <ul class="dropdown-menu">
+                           <li><a th:href="@{/basic/default}">Default configuration</a></li>
+                           <li><a th:href="@{/basic/info}">Display table informations</a></li>
+                           <li><a th:href="@{/basic/sorting}">Table sorting</a></li>
+                           <li><a th:href="@{/basic/filtering}">Table filtering</a></li>
+                           <li><a th:href="@{/basic/paging}">Table paging</a></li>
+                           <li><a th:href="@{/basic/lenghchange}">Table length changing</a></li>
+                           <li><a th:href="@{/basic/autowidth}">Table width</a></li>
+                           <li><a th:href="@{/basic/implicitObject}">Using implicit object</a></li>
+                           <li><a th:href="@{/basic/cdn}">Using CDN</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+                  <ul class="nav pull-right">
+                     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-globe"></i> Reference <b
+                           class="caret"
+                        ></b></a>
+                        <ul class="dropdown-menu">
+                           <li><a href="http://datatables4j.github.com/docs/">DataTables4j</a></li>
+                           <li><a href="http://datatables.net/">DataTables</a></li>
+                        </ul></li>
+                     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-search"></i> Help <b
+                           class="caret"
+                        ></b></a>
+                        <ul class="dropdown-menu">
+                           <li><a href="https://github.com/datatables4j/issues/issues">Issues / Enhancements</a></li>
+                           <li><a href="http://datatables4j.github.com/docs/main.forum.html">DataTables forum</a></li>
+                           <li><a href="http://www.thymeleaf.org">Thymeleaf home</a></li>
+                        </ul></li>
+                  </ul>
+               </div>
+               <!--/.nav-collapse -->
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+   <footer>
+      <p>My footer</p>
+   </footer>
+</body>
+</html>
