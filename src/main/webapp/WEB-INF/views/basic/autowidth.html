@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:dt="http://www.thymeleaf.org/datatables4jdialect">
+<head th:include="layout/mainLayout :: headerFragment"></head>
+<body>
+   <div th:include="layout/mainLayout :: navbarFragment"></div>
+
+   <div class="container">
+
+      <div class="row">
+         <div class="span12">
+            <h3>Auto width</h3>
+            <hr />
+         </div>
+      </div>
+      <div class="row">
+         <div class="span12">
+
+            <table id="myTable" dt:table="true" dt:autowidth="false">
+               <thead>
+                  <tr>
+                     <th>Id</th>
+                     <th>Firstname</th>
+                     <th>Lastname</th>
+                     <th>Street</th>
+                     <th>Mail</th>
+                  </tr>
+               </thead>
+               <tbody th:remove="all-but-first">
+                  <tr th:each="person : ${persons}">
+                     <td th:text="${person.id}">1</td>
+                     <td th:text="${person.firstName}">John</td>
+                     <td th:text="${person.lastName}">Doe</td>
+                     <td th:text="${person.address.street1}">Nobody knows !</td>
+                     <td th:text="${person.mail}">john@doe.com</td>
+                  </tr>
+                  <tr>
+                     <td>2</td>
+                     <td>Elvis</td>
+                     <td>Priesley</td>
+                     <td>??</td>
+                     <td>elvis@presley.com</td>
+                  </tr>
+                  <tr>
+                     <td>3</td>
+                     <td>Apparels</td>
+                     <td>15</td>
+                     <td>650 €</td>
+                     <td>toto@titi.fr</td>
+                  </tr>
+               </tbody>
+            </table>
+
+         </div>
+      </div>
+      <div class="row">
+         <div class="span12"></div>
+      </div>
+   </div>
+</body>
+</html>

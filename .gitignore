@@ -3,3 +3,4 @@
 /target
 /.classpath
 /src/main/resources/rebel.xml
+/datatables4j-demo-thymeleaf.iml

@@ -10,7 +10,6 @@
    <!-- THYMELEAF-SPECIFIC ARTIFACTS -->
    <!-- TemplateResolver <- TemplateEngine <- ViewResolver -->
    <!-- **************************************************************** -->
-
    <bean id="templateResolver"
       class="org.thymeleaf.templateresolver.ServletContextTemplateResolver">
       <property name="prefix" value="/WEB-INF/views/" />
@@ -25,8 +24,8 @@
       <property name="templateResolver" ref="templateResolver" />
       <property name="additionalDialects">
          <set>
-            <bean
-               class="com.github.datatables4j.core.thymeleaf.dialect.DataTablesDialect" />
+            <bean class="nz.net.ultraq.web.thymeleaf.LayoutDialect" />
+            <bean class="com.github.datatables4j.core.thymeleaf.dialect.DataTablesDialect" />
          </set>
       </property>
    </bean>

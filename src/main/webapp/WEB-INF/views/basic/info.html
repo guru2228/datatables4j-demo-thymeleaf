@@ -12,9 +12,15 @@
 
       <div class="row-fluid">
          <div class="span12">
-            <h3>Default configuration</h3>
-            <p>Using the default configuration, basic features are allways activated : filtering, paging, sorting,
-               ...</p>
+            <h3>Table informations</h3>
+            <p>
+               By default, table informations are displayed but you may need to hide them.<br /> You can do it setting
+               the
+               <code>dt:info</code>
+               table attribute to
+               <tt>false</tt>
+               .
+            </p>
             <br />
          </div>
       </div>
@@ -29,12 +35,12 @@
             <div class="tab-content">
                <div class="tab-pane active" id="tabDemo">
 
-                  <table id="myTable" dt:table="true">
+                  <table id="myTable" dt:table="true" dt:info="false">
                      <thead>
                         <tr>
                            <th>Id</th>
-                           <th>Firstname</th>
-                           <th>Lastname</th>
+                           <th>FirstName</th>
+                           <th>LastName</th>
                            <th>Street</th>
                            <th>Mail</th>
                         </tr>
@@ -67,14 +73,14 @@
 														.getGithubFileByFilePath(
 																"datatables4j",
 																"datatables4j-demo-thymeleaf",
-																"src/main/webapp/WEB-INF/views/basic/default.html",
+																"src/main/webapp/WEB-INF/views/basic/info.html",
 																function(
 																		contents) {
 																	$('#code')
 																			.text(
 																					contents);
 																	prettyPrint();
-																}, 18, 51);
+																}, 38, 57);
 
 												prettyPrint();
 											});

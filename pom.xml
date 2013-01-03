@@ -58,6 +58,11 @@
          <artifactId>thymeleaf-spring3</artifactId>
          <version>${thymeleaf.version}</version>
       </dependency>
+      <dependency>
+         <groupId>nz.net.ultraq.web.thymeleaf</groupId>
+         <artifactId>thymeleaf-layout-dialect</artifactId>
+         <version>1.0.5</version>
+      </dependency>
 
       <!-- Logging -->
       <dependency>
