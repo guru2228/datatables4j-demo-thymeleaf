@@ -1,9 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
-   xmlns:dt="http://www.thymeleaf.org/datatables4jdialect" layout:decorator="common/layout/basicLayout">
+   xmlns:dt="http://www.thymeleaf.org/datatables4jdialect" layout:decorator="common/layout/pluginLayout">
 
 <head>
-<title>Default configuration</title>
+<title>Scroller plugin</title>
 </head>
 
 <body>
@@ -12,7 +12,7 @@
 
       <div class="row-fluid">
          <div class="span12">
-            <h3>Default configuration</h3>
+            <h3>Scroller</h3>
             <br />
          </div>
       </div>
@@ -21,7 +21,7 @@
          <div class="span12">
 
             <table id="myTable" dt:table="true">
-               <thead>
+               <thead dt:scroller="true">
                   <tr>
                      <th>Id</th>
                      <th>Firstname</th>
@@ -30,7 +30,7 @@
                      <th>Mail</th>
                   </tr>
                </thead>
-               <tbody th:remove="all-but-first">
+               <tbody>
                   <tr th:each="person : ${persons}">
                      <td th:text="${person.id}">1</td>
                      <td th:text="${person.firstName}">John</td>
@@ -43,5 +43,6 @@
          </div>
       </div>
    </div>
+
 </body>
 </html>

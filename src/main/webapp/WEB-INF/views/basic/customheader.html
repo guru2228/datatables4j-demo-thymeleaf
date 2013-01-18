@@ -1,9 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
    xmlns:dt="http://www.thymeleaf.org/datatables4jdialect" layout:decorator="common/layout/basicLayout">
 
 <head>
-<title>Default configuration</title>
+<title>Custom column header</title>
 </head>
 
 <body>
@@ -12,7 +12,7 @@
 
       <div class="row-fluid">
          <div class="span12">
-            <h3>Default configuration</h3>
+            <h3>Custom column header</h3>
             <br />
          </div>
       </div>
@@ -20,7 +20,7 @@
       <div class="row-fluid">
          <div class="span12">
 
-            <table id="myTable" dt:table="true">
+            <table id="myTableId" dt:table="true">
                <thead>
                   <tr>
                      <th>Id</th>
@@ -28,6 +28,8 @@
                      <th>Lastname</th>
                      <th>Street</th>
                      <th>Mail</th>
+                     <th dt:sortable="false"><input type="checkbox"
+                        onclick="$('#myTableId').find(':checkbox').attr('checked', this.checked);" /></th>
                   </tr>
                </thead>
                <tbody th:remove="all-but-first">
@@ -37,6 +39,7 @@
                      <td th:text="${person.lastName}">Doe</td>
                      <td th:text="${person.address.street1}">Nobody knows !</td>
                      <td th:text="${person.mail}">john@doe.com</td>
+                     <td style="text-align:center;"><input type="checkbox" th:value="${person.id}" /></td>
                   </tr>
                </tbody>
             </table>

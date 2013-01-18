@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
    xmlns:dt="http://www.thymeleaf.org/datatables4jdialect" layout:decorator="common/layout/basicLayout">
 
@@ -12,7 +12,7 @@
 
       <div class="row-fluid">
          <div class="span12">
-            <h3>Default configuration</h3>
+            <h3>Using CDN</h3>
             <br />
          </div>
       </div>
@@ -20,7 +20,7 @@
       <div class="row-fluid">
          <div class="span12">
 
-            <table id="myTable" dt:table="true">
+            <table id="myTable" dt:table="true" dt:cdn="true">
                <thead>
                   <tr>
                      <th>Id</th>

@@ -10,15 +10,14 @@
    <name>DataTables4j :: Demo :: Thymeleaf</name>
    <description>DataTables4j demo using the backward compatibility module for Servlet 2.x</description>
 
-
    <properties>
       <!-- Configuration -->
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
       <!-- Dependencies -->
       <spring.version>3.1.2.RELEASE</spring.version>
-      <datatables4j.version>0.7.1-SNAPSHOT</datatables4j.version>
-      <datatables4j.thymeleaf.version>0.1.0-SNAPSHOT</datatables4j.thymeleaf.version>
+      <datatables4j.version>0.8.1-SNAPSHOT</datatables4j.version>
+      <datatables4j.thymeleaf.version>0.1.1-SNAPSHOT</datatables4j.thymeleaf.version>
       <thymeleaf.version>2.0.15</thymeleaf.version>
       <slf4j.version>1.6.4</slf4j.version>
       <logback.version>1.0.7</logback.version>
@@ -63,6 +62,11 @@
          <artifactId>thymeleaf-layout-dialect</artifactId>
          <version>1.0.5</version>
       </dependency>
+      <dependency>
+         <groupId>fr.tduchateau</groupId>
+         <artifactId>thymeleaf-bootstrap-dialect</artifactId>
+         <version>1.0.0</version>
+      </dependency>
 
       <!-- Logging -->
       <dependency>
@@ -85,6 +89,7 @@
          <artifactId>commons-logging</artifactId>
          <version>1.1.1</version>
       </dependency>
+
    </dependencies>
 
    <repositories>

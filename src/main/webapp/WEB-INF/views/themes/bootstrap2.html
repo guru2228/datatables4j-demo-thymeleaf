@@ -5,12 +5,15 @@
 <head layout:fragment="header">
 <title>Bootstrap 2 Theme</title>
 <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet" />
+<link th:href="@{/css/font-awesome.min.css}" rel="stylesheet" />
 <link th:href="@{/css/custom.css}" rel="stylesheet" />
+<link th:href="@{/css/prettify.css}" rel="stylesheet" />
 
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 <script th:src="@{/js/github-files.js}"></script>
+<script th:src="@{/js/prettify.js}"></script>
 </head>
 
 <body>
@@ -22,7 +25,7 @@
             <h3>Bootstrap 2 theme</h3>
       In order to activate the Bootstrap 2 theme, just :
       <ul>
-         <li>set the <tt>theme</tt> table attribute to <tt>bootstrap2</tt></li>
+         <li>set the <code>dt:theme</code> table attribute to <tt>bootstrap2</tt></li>
          <li>add the table Bootstrap CSS classes using <tt>cssClass</tt> table attribute depending on your needs
          </li>
       </ul>
@@ -50,7 +53,7 @@
                            <th>Mail</th>
                         </tr>
                      </thead>
-                     <tbody th:remove="all-but-first">
+                     <tbody>
                         <tr th:each="person : ${persons}">
                            <td th:text="${person.id}">1</td>
                            <td th:text="${person.firstName}">John</td>
@@ -78,14 +81,14 @@
 														.getGithubFileByFilePath(
 																"datatables4j",
 																"datatables4j-demo-thymeleaf",
-																"src/main/webapp/WEB-INF/views/basic/default.html",
+																"src/main/webapp/WEB-INF/views/themes/bootstrap2.html",
 																function(
 																		contents) {
 																	$('#code')
 																			.text(
 																					contents);
 																	prettyPrint();
-																}, 18, 51);
+																}, 43, 62);
 
 												prettyPrint();
 											});

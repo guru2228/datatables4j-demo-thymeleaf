@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
    xmlns:dt="http://www.thymeleaf.org/datatables4jdialect" layout:decorator="common/layout/basicLayout">
 
@@ -12,7 +12,8 @@
 
       <div class="row-fluid">
          <div class="span12">
-            <h3>Default configuration</h3>
+            <h3>Export</h3>
+            <br />
             <br />
          </div>
       </div>
@@ -20,7 +21,7 @@
       <div class="row-fluid">
          <div class="span12">
 
-            <table id="myTable" dt:table="true">
+            <table id="myTable" dt:table="true" dt:export="pdf,xls,csv">
                <thead>
                   <tr>
                      <th>Id</th>
@@ -30,13 +31,13 @@
                      <th>Mail</th>
                   </tr>
                </thead>
-               <tbody th:remove="all-but-first">
+               <tbody>
                   <tr th:each="person : ${persons}">
                      <td th:text="${person.id}">1</td>
                      <td th:text="${person.firstName}">John</td>
                      <td th:text="${person.lastName}">Doe</td>
                      <td th:text="${person.address.street1}">Nobody knows !</td>
-                     <td th:text="${person.mail}">john@doe.com</td>
+                     <td><a th:href="${'mailto:' + person.mail}" th:text="${person.mail}">john@doe.com</a></td>
                   </tr>
                </tbody>
             </table>
