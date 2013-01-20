@@ -26,7 +26,6 @@
          <set>
             <bean class="nz.net.ultraq.web.thymeleaf.LayoutDialect" />
             <bean class="com.github.datatables4j.core.thymeleaf.dialect.DataTablesDialect" />
-            <bean class="fr.tduchateau.thymeleaf.bootstrap.dialect.BootstrapDialect" />
          </set>
       </property>
    </bean>

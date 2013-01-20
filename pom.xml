@@ -16,8 +16,7 @@
 
       <!-- Dependencies -->
       <spring.version>3.1.2.RELEASE</spring.version>
-      <datatables4j.version>0.8.1-SNAPSHOT</datatables4j.version>
-      <datatables4j.thymeleaf.version>0.1.1-SNAPSHOT</datatables4j.thymeleaf.version>
+      <datatables4j.version>0.8.1</datatables4j.version>
       <thymeleaf.version>2.0.15</thymeleaf.version>
       <slf4j.version>1.6.4</slf4j.version>
       <logback.version>1.0.7</logback.version>
@@ -61,11 +60,6 @@
          <groupId>nz.net.ultraq.web.thymeleaf</groupId>
          <artifactId>thymeleaf-layout-dialect</artifactId>
          <version>1.0.5</version>
-      </dependency>
-      <dependency>
-         <groupId>fr.tduchateau</groupId>
-         <artifactId>thymeleaf-bootstrap-dialect</artifactId>
-         <version>1.0.0</version>
       </dependency>
 
       <!-- Logging -->
