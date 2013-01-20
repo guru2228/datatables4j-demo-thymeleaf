@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
-   xmlns:dt="http://www.thymeleaf.org/datatables4jdialect" layout:decorator="common/layout/pluginLayout">
+   xmlns:dt="http://www.thymeleaf.org/datatables4jdialect" layout:decorator="common/layout/basicLayout">
 
 <head>
-<title>ColReorder plugin</title>
+<title>Advanced example - Row id</title>
 </head>
 
 <body>
@@ -12,7 +12,7 @@
 
       <div class="row-fluid">
          <div class="span12">
-            <h3>ColReorder</h3>
+            <h3>Row id</h3>
             <br />
          </div>
       </div>
@@ -21,7 +21,7 @@
          <div class="span12">
 
             <table id="myTable" dt:table="true">
-               <thead dt:colReorder="true">
+               <thead>
                   <tr>
                      <th>Id</th>
                      <th>Firstname</th>
@@ -31,12 +31,12 @@
                   </tr>
                </thead>
                <tbody>
-                  <tr th:each="person : ${persons}">
+                  <tr th:each="person : ${persons}" th:attr="id=${'person_' + person.id}">
                      <td th:text="${person.id}">1</td>
                      <td th:text="${person.firstName}">John</td>
                      <td th:text="${person.lastName}">Doe</td>
                      <td th:text="${person.address.street1}">Nobody knows !</td>
-                     <td><a th:href="${'mailto:' + person.mail}" th:text="${person.mail}">john@doe.com</a></td>
+                     <td th:text="${person.mail}">john@doe.com</td>
                   </tr>
                </tbody>
             </table>
